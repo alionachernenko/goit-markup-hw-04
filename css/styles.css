@@ -1,0 +1,397 @@
+
+:root {
+    --main-color: #212121;
+    --accent-color: #2196F3;
+    --hero-footer-background-color: #2F303A;
+    --paragraph-color: #757575;
+    --header-logo-color: #000000;
+    --footer-logo-color: #FFFFFF;
+    --location-color: #FFFFFF;
+    --hero-title-color: #FFFFFF;
+    --main-background-color: #FFFFFF;
+    --main-button-color: #FFFFFF;
+    --filter-button-color: #F5F4FA;
+    --team-color: #F5F4FA;
+    --team-card-background: #FFFFFF;
+    --footer-contacts: rgba(255, 255, 255, 0.6); 
+    --border-color: #ECECEC;
+}
+
+body {
+    background-color: var(--main-background-color);
+    font-family: 'Roboto', sans-serif;
+    color: var(--main-color);
+}
+
+h1, h2, h3, p, ul {
+    margin: 0;
+    padding: 0;
+}
+.container {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 15px;
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+}
+
+.nav {
+    margin-left: 93px;
+    display: flex;
+}
+
+.nav li:not(:last-child) {
+    margin-right: 50px;
+}
+
+.list.contacts {
+    display: flex;
+    margin-left: auto;
+}
+
+.list.contacts :not(:last-child){
+    margin-right: 50px;
+}
+
+
+.hero .container {
+    text-align: center;
+    width: 696px;
+}
+
+.hero {
+    padding: 200px 0;
+}
+
+.benefits {
+    padding: 94px 0;
+}
+.benefits .container .list{
+    display: flex;
+    gap: 30px;
+}
+
+.benefits li {
+    flex-basis: calc((100% - 3 * 30px)/4);
+}
+
+.services .list {
+    display: flex;
+    gap: 30px;
+}
+
+.benefit {
+    width: 270px;
+}
+
+
+.nav .link {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+.list.contacts .link {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+.services {
+    padding-bottom: 94px;
+}
+
+.team {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+.team .container .list {
+    display: flex;
+    gap: 30px;
+}
+
+footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.web-logo {
+    color: var(--accent-color);
+}
+
+.logo-header {
+    font-family: 'Raleway', sans-serif;
+    font-size: 26px;
+    color: var(--header-logo-color);
+    text-decoration: none;
+}
+.logo-footer {
+    margin-bottom: 20px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 26px;
+    color: var(--footer-logo-color);
+    text-decoration: none;
+}
+
+footer .list {
+    margin-top: 20px;
+}
+
+address .list :not(:last-child) {
+    margin-bottom: 9px;
+}
+.nav .link.current {
+    color: var(--accent-color)
+}
+
+
+
+.link {
+    text-decoration: none;
+    color: var(--main-color);
+}
+.link:hover,
+.link:focus,
+.header-mail:hover,
+.header-mail:focus {
+    color: var(--accent-color);
+}
+
+.address {
+    font-style: normal;
+}
+.contacts {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: var(--paragraph-color);
+    text-decoration: none;
+}
+.contacts-footer {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: var(--footer-contacts);
+}
+.location {
+    font-size: 14px;
+    line-height: 1.7;
+    letter-spacing: 0.03em;
+    color: var(--location-color);
+}
+
+.hero, .footer {
+    background-color: var(--hero-footer-background-color);
+}
+
+.hero-title {
+    margin-bottom: 26px;
+    text-align: center;
+    color: var(--hero-title-color);
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.45;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.card-title {
+    margin-bottom: 4px;
+
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;    
+    letter-spacing: 0.06em;
+    color: var(--main-color);
+}
+.card-paragraph {
+    line-height: 30px;
+    letter-spacing: 0.03em;
+    color: var(--paragraph-color);
+}
+.team-subtitle {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.18;
+    letter-spacing: 0.03em;
+    color: var(--main-color);
+}
+.team-professional {
+    line-height: 1.8;
+    letter-spacing: 0.03em;
+    color: var(--paragraph-color);
+}
+
+.benefits-title, 
+.services-title, 
+.team-title {
+    text-align: center;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    letter-spacing: 0.03em;
+    color: var(--main-color);
+}
+
+.services-title,
+.team-title {
+    margin-bottom: 50px;
+}
+
+/* списки */
+.list {
+    list-style-type: none;
+}
+.nav {
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.service {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+.service .list-service li {
+    flex-basis: calc((100% - 2 * 30px)/3);
+}
+.list-buttons {
+    justify-content: center;
+    display: flex;
+    margin-bottom: 50px;
+}
+.list-buttons :not(:last-child) {
+    margin-right: 8px;
+}
+
+.list-service {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.list-service:not(:nth-child(3n)){
+    margin-right: 30px;
+}
+
+
+.filter-button {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 22px;
+    padding-right: 22px;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--main-color);
+    background: var(--filter-button-color);
+    border-radius: 4px;
+    border: none;
+}
+
+.list-buttons .filter-button.current {
+    background-color: var(--accent-color);
+    color: var(--main-button-color);
+    border: none;
+}
+
+.filter-button:hover,
+.filter-button:focus,
+.main-button {
+    background-color: var(--accent-color);
+    color: var(--main-button-color);
+    border: none;
+    cursor: pointer;
+}
+.main-button {
+    height: 50px;
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    min-width: 216px;
+
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 16px;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+    background: var(--accent-color);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+.benefit-title{
+    margin-bottom: 10px;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--main-color);
+}
+
+.benefit-paragraph {
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: var(--paragraph-color);
+}
+
+
+.team {
+    background-color: var(--team-color);
+}
+
+.professional-card {
+    width: 270px;
+    background-color: var(--team-card-background);
+    padding-bottom: 30px;
+    border-radius: 0px 0px 4px 4px;
+    text-align: center;
+}
+
+.team li {
+    background-color: var(--team-card-background);
+    flex-basis: calc((100% - 3 * 30px)/4)
+}
+.professional-description {
+    padding: 30px 0;
+    text-align: center;
+}
+
+.team-subtitle {
+    margin-bottom: 10px;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.card-description {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 24px;
+    padding-left: 24px;
+    border-bottom: 1px solid var(--border-color);
+    border-left: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
+}
+
+header {
+    border-bottom: 1px solid var(--border-color);
+}
