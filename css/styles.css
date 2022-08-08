@@ -39,8 +39,10 @@ header .container {
     align-items: center;
 }
 
-.nav {
+nav {
     margin-left: 93px;
+}
+.nav {
     display: flex;
 }
 
@@ -53,6 +55,27 @@ header .container {
     margin-left: auto;
 }
 
+
+
+.contact-item {
+    width: 16px;
+    height: 12px;
+    margin-right: 10px;
+}
+
+/* .benefits ul li:first-child::before {
+    display: block;
+    content: "";
+    background-image: url(../image/antenna\ 1.png);
+    background-color: #F5F4FA;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 270px;
+    height: 120px;
+    margin-bottom: 30px;
+} */
+
+
 .list.contacts :not(:last-child){
     margin-right: 50px;
 }
@@ -64,7 +87,16 @@ header .container {
 }
 
 .hero {
-    padding: 200px 0;
+    padding: 200px 0; 
+    background-image: 
+        linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../image/heroimage.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    max-width: 1600px;
+
+   
 }
 
 .benefits {
@@ -96,10 +128,20 @@ header .container {
 }
 
 .list.contacts .link {
-    display: block;
+    display: flex;
+    align-items: center;
     padding-top: 32px;
     padding-bottom: 32px;
 }
+
+.contact-item {
+    fill: #757575;
+}
+
+.list.contacts .link:hover .contact-item {
+    fill:#2196F3; 
+}
+
 .services {
     padding-bottom: 94px;
 }
@@ -109,6 +151,21 @@ header .container {
     padding-bottom: 94px;
 }
 
+.customers {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+.customers ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.customer-icon {
+    width: 170px;
+    height: 72px;
+}
 .team .container .list {
     display: flex;
     gap: 30px;
@@ -239,6 +296,20 @@ address .list :not(:last-child) {
     color: var(--main-color);
 }
 
+.benefit-icon {
+    width: 62px;
+    height: 70px;
+}
+
+.benefit-item {
+    width: 270px;
+    height: 120px;
+    background-color: #F5F4FA;
+    border-radius: 4px;
+    margin-bottom: 30px;
+    text-align: center;
+    padding-top: 25px;
+}
 .services-title,
 .team-title {
     margin-bottom: 50px;
@@ -358,23 +429,55 @@ address .list :not(:last-child) {
 .professional-card {
     width: 270px;
     background-color: var(--team-card-background);
-    padding-bottom: 30px;
     border-radius: 0px 0px 4px 4px;
     text-align: center;
+    padding: 0;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    background-color: var(--team-card-background);
+    flex-basis: calc((100% - 3 * 30px)/4);
 }
 
-.team li {
-    background-color: var(--team-card-background);
-    flex-basis: calc((100% - 3 * 30px)/4)
-}
 .professional-description {
-    padding: 30px 0;
+    padding-top: 30px;
+    margin-bottom: 16px;
     text-align: center;
 }
 
 .team-subtitle {
     margin-bottom: 10px;
 }
+
+
+.social-items {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.social-items div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50px;
+}
+
+.social-items div:hover .social-icon {
+    fill: #FFFFFF;
+}
+.social-items div:hover {
+    background-color: #2196F3;
+}
+
+.social-icon {
+    width: 20px;
+    height: 20px;
+    fill: #AFB1B8;
+}
+
+
 
 img {
     display: block;
