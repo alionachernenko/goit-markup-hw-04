@@ -15,6 +15,13 @@
     --team-card-background: #FFFFFF;
     --footer-contacts: rgba(255, 255, 255, 0.6); 
     --border-color: #ECECEC;
+    --icons-main-color: #AFB1B8;
+    --icons-secondary-color: #FFFFFF;
+    --icons-hover-color: #2196F3;
+    --find-us-color: #FFFFFF;
+    --hero-gradient: rgba(47, 48, 58, 0.4);
+    --benefit-item-background: #F5F4FA;
+    --icon-background: rgba(255, 255, 255, 0.1);
 }
 
 body {
@@ -63,17 +70,7 @@ nav {
     margin-right: 10px;
 }
 
-/* .benefits ul li:first-child::before {
-    display: block;
-    content: "";
-    background-image: url(../image/antenna\ 1.png);
-    background-color: #F5F4FA;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 270px;
-    height: 120px;
-    margin-bottom: 30px;
-} */
+
 
 
 .list.contacts :not(:last-child){
@@ -89,7 +86,7 @@ nav {
 .hero {
     padding: 200px 0; 
     background-image: 
-        linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        linear-gradient(to right, var(--hero-gradient), var(--hero-gradient)),
         url(../image/heroimage.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -138,7 +135,8 @@ nav {
     fill: #757575;
 }
 
-.list.contacts .link:hover .contact-item {
+.list.contacts .link:hover .contact-item,
+.list.contacts .link:focus .contact-item {
     fill:#2196F3; 
 }
 
@@ -158,14 +156,39 @@ nav {
 
 .customers ul {
     display: flex;
+    gap: 30px;
     justify-content: center;
     list-style: none;
 }
 
 .customer-icon {
-    width: 170px;
-    height: 72px;
+    fill: var(--icons-main-color);
+    width: 106px;
+    height: 60px;
 }
+
+.customer-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 170px;
+    height: 92px;
+    border: 1px solid var(--icons-main-color);
+    border-radius: 4px;
+}
+
+.customer-container:hover,
+.customer-container:focus
+{
+    border-color: var(--icons-hover-color);
+}
+
+.customer-container:hover .customer-icon,
+.customer-container:focus .customer-icon
+ {
+    fill: var(--icons-hover-color);
+}
+
 .team .container .list {
     display: flex;
     gap: 30px;
@@ -302,13 +325,15 @@ address .list :not(:last-child) {
 }
 
 .benefit-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 270px;
     height: 120px;
-    background-color: #F5F4FA;
+    background-color: var(--benefit-item-background);
     border-radius: 4px;
     margin-bottom: 30px;
     text-align: center;
-    padding-top: 25px;
 }
 .services-title,
 .team-title {
@@ -331,6 +356,11 @@ address .list :not(:last-child) {
 
 .service .list-service li {
     flex-basis: calc((100% - 2 * 30px)/3);
+}
+
+
+.service .list-service li:hover {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .list-buttons {
     justify-content: center;
@@ -453,9 +483,10 @@ address .list :not(:last-child) {
     justify-content: center;
     list-style: none;
     margin-bottom: 30px;
+    gap: 10px;
 }
 
-.social-items div {
+.social-items-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -464,11 +495,14 @@ address .list :not(:last-child) {
     border-radius: 50px;
 }
 
-.social-items div:hover .social-icon {
-    fill: #FFFFFF;
+.social-items-container:hover .social-icon,
+.social-items-container:focus .social-icon {
+    fill: var(--icons-secondary-color);
 }
-.social-items div:hover {
-    background-color: #2196F3;
+.social-items-container:hover,
+.social-items-container:focus
+ {
+    background-color: var(--icons-hover-color);
 }
 
 .social-icon {
@@ -497,4 +531,48 @@ img {
 
 header {
     border-bottom: 1px solid var(--border-color);
+}
+
+.footer .container{
+    display: flex;
+    gap: 70px;
+}
+
+.find-us-title {
+    color: var(--find-us-color);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+.find-us-icon {
+    width: 20px;
+    height: 20px;
+    fill: var(--icons-secondary-color);
+}
+.find-us-items {
+    display: flex;
+    gap: 10px;
+    margin: 0;
+}
+
+.find-us-icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50px;
+    background-color: var(--icon-background);
+}
+
+.find-us-icon-container:hover,
+.find-us-icon-container:focus {
+    background-color: var(--icons-hover-color);
+}
+
+.find-us-container {
+    margin-top: 15px;
 }

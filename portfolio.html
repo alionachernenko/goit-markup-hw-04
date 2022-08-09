@@ -25,22 +25,26 @@
         >
         <nav>
           <ul class="list nav">
-            <li><a class="link" href="./index.html">Студія</a></li>
-            <li>
-              <a class="link current" href="./portfolio.html">Портфоліо</a>
-            </li>
+            <li><a class="link current" href="./index.html">Студія</a></li>
+            <li><a class="link" href="./portfolio.html">Портфоліо</a></li>
             <li><a class="link" href="">Контакти</a></li>
           </ul>
         </nav>
         <ul class="list contacts">
           <li>
-            <a class="link contacts" href="mailto:info@devstudio.com"
-              >info@devstudio.com</a
+            <a class="link contacts" href="mailto:info@devstudio.com">
+              <svg class="contact-item">
+                <use href="./image/symbol-defs.svg#letter"></use>
+              </svg>
+              info@devstudio.com</a
             >
           </li>
           <li>
-            <a class="link contacts" href="tel:+380961111111"
-              >+38 096 111 11 11</a
+            <a class="link contacts" href="tel:+380961111111">
+              <svg class="contact-item">
+                <use href="./image/symbol-defs.svg#phone"></use>
+              </svg>
+              +38 096 111 11 11</a
             >
           </li>
         </ul>
@@ -169,24 +173,59 @@
     </main>
     <footer class="footer">
       <div class="container">
-        <a class="logo-footer" href="./index.html"
-          ><span class="web-logo" lang="en">Web</span>Studio</a
-        >
-        <address class="address">
-          <ul class="list">
-            <li class="location">м. Київ, пр-т Лесі Українки, 26</li>
+        <div>
+          <a class="logo-footer" href="./index.html"
+            ><span class="web-logo" lang="en">Web</span>Studio</a
+          >
+          <address class="address">
+            <ul class="list">
+              <li class="location">м. Київ, пр-т Лесі Українки, 26</li>
+              <li>
+                <a class="link contacts-footer" href="mailto:info@example.com"
+                  >info@example.com</a
+                >
+              </li>
+              <li>
+                <a class="link contacts-footer" href="tel:+12127724150"
+                  >+1 212-772-4150</a
+                >
+              </li>
+            </ul>
+          </address>
+        </div>
+        <div class="find-us-container">
+          <b class="find-us-title">Приєднуйся</b>
+          <ul class="list find-us-items">
             <li>
-              <a class="link contacts-footer" href="mailto:info@example.com"
-                >info@example.com</a
-              >
+              <a class="find-us-icon-container" href="#">
+                <svg class="find-us-icon">
+                  <use href="./image/symbol-defs.svg#instagram"></use>
+                </svg>
+              </a>
             </li>
             <li>
-              <a class="link contacts-footer" href="tel:+12127724150"
-                >+1 212-772-4150</a
-              >
+              <a class="find-us-icon-container" href="#">
+                <svg class="find-us-icon">
+                  <use href="./image/symbol-defs.svg#twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a class="find-us-icon-container" href="#">
+                <svg class="find-us-icon">
+                  <use href="./image/symbol-defs.svg#facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a class="find-us-icon-container" href="#">
+                <svg class="find-us-icon">
+                  <use href="./image/symbol-defs.svg#linkedin"></use>
+                </svg>
+              </a>
             </li>
           </ul>
-        </address>
+        </div>
       </div>
     </footer>
   </body>
