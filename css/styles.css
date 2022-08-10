@@ -28,6 +28,7 @@ body {
     background-color: var(--main-background-color);
     font-family: 'Roboto', sans-serif;
     color: var(--main-color);
+    
 }
 
 h1, h2, h3, p, ul {
@@ -91,7 +92,7 @@ nav {
     background-size: cover;
     background-position: center;
     max-width: 1600px;
-
+    margin: 0 auto;
    
 }
 
@@ -357,10 +358,19 @@ address .list :not(:last-child) {
     flex-basis: calc((100% - 2 * 30px)/3);
 }
 
+.service-card {
+    text-decoration: none;
+    display: block;
+}
 
-.list-service li:hover{
+.service-card:focus,
+.service-card:hover {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
+
+/* .list-service li:hover{
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+} */
 .list-buttons {
     justify-content: center;
     display: flex;
@@ -396,22 +406,34 @@ address .list :not(:last-child) {
     background: var(--filter-button-color);
     border-radius: 4px;
     border: none;
+
 }
 
 .list-buttons .filter-button.current {
     background-color: var(--accent-color);
     color: var(--main-button-color);
     border: none;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-.filter-button:hover,
-.filter-button:focus,
+
 .main-button {
     background-color: var(--accent-color);
     color: var(--main-button-color);
     border: none;
     cursor: pointer;
+
 }
+
+.filter-button:hover,
+.filter-button:focus {
+    background-color: var(--accent-color);
+    color: var(--main-button-color);
+    border: none;
+    cursor: pointer;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
 .main-button {
     height: 50px;
     padding-left: 32px;
@@ -588,3 +610,4 @@ header {
 .find-us-container {
     margin-top: 15px;
 }
+
