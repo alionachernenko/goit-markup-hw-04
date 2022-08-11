@@ -131,7 +131,15 @@ nav {
     padding-bottom: 32px;
 }
 
-.contact-item {
+.contact-item.mail{
+    width: 16px;
+    height: 12px;
+    fill: #757575;
+}
+
+.contact-item.tel {
+    width: 10px;
+    height: 16px;
     fill: #757575;
 }
 
@@ -208,6 +216,8 @@ footer {
     font-size: 26px;
     color: var(--header-logo-color);
     text-decoration: none;
+    padding-top: 24px;
+    padding-bottom: 24px;
 }
 .logo-footer {
     margin-bottom: 20px;
@@ -306,6 +316,7 @@ address .list :not(:last-child) {
     line-height: 1.8;
     letter-spacing: 0.03em;
     color: var(--paragraph-color);
+    margin-bottom: 16px;
 }
 
 .benefits-title, 
@@ -422,8 +433,9 @@ address .list :not(:last-child) {
     color: var(--main-button-color);
     border: none;
     cursor: pointer;
-
 }
+
+
 
 .filter-button:hover,
 .filter-button:focus {
@@ -490,7 +502,7 @@ address .list :not(:last-child) {
 
 .professional-description {
     padding-top: 30px;
-    margin-bottom: 16px;
+    padding-bottom: 30px;
     text-align: center;
 }
 
@@ -503,7 +515,6 @@ address .list :not(:last-child) {
     display: flex;
     justify-content: center;
     list-style: none;
-    margin-bottom: 30px;
     gap: 10px;
 }
 
@@ -569,6 +580,7 @@ header {
 
 .footer .container{
     display: flex;
+    align-items: center;
     gap: 70px;
 }
 
@@ -607,7 +619,5 @@ header {
     background-color: var(--icons-hover-color);
 }
 
-.find-us-container {
-    margin-top: 15px;
-}
+
 
