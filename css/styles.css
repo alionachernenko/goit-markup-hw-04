@@ -68,6 +68,7 @@ nav {
     width: 16px;
     height: 12px;
     margin-right: 10px;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -143,6 +144,10 @@ nav {
     fill: #757575;
 }
 
+.contact-item:hover {
+    fill: #2196F3;
+}
+
 .list.contacts .link:hover .contact-item,
 .list.contacts .link:focus .contact-item {
     fill:#2196F3; 
@@ -173,6 +178,7 @@ nav {
     fill: var(--icons-main-color);
     width: 106px;
     height: 60px;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customer-container {
@@ -183,6 +189,7 @@ nav {
     height: 92px;
     border: 1px solid var(--icons-main-color);
     border-radius: 4px;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customer-container:hover,
@@ -234,16 +241,59 @@ footer .list {
 address .list :not(:last-child) {
     margin-bottom: 9px;
 }
-.nav .link.current {
-    color: var(--accent-color)
+.link.current {
+    color: var(--accent-color);
+    position: relative;
+}
+
+.service-item{
+    position: relative;
 }
 
 
+.service-decription {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: rgba(47, 48, 58, 0.8);
+    z-index: 1;
+}
+    
+.service-decription b {
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.link.current::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #2196F3;
+    border-radius: 2px;
+    display: block;
+}
 
 .link {
     text-decoration: none;
     color: var(--main-color);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+
+
 .link:hover,
 .link:focus,
 .header-mail:hover,
@@ -372,6 +422,30 @@ address .list :not(:last-child) {
 .service-card {
     text-decoration: none;
     display: block;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.service-card-block {
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card-description {
+    background-color: rgba(33, 150, 243, 0.9);
+    padding: 63px 24px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.service-card-description p {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.5;
+    letter-spacing: 0.03em;
+    color: #FFFFFF;
 }
 
 .service-card:focus,
@@ -379,6 +453,10 @@ address .list :not(:last-child) {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
+.service-card:focus .service-card-description,
+.service-card:hover .service-card-description{
+    transform: translateY(-100%);
+}
 /* .list-service li:hover{
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 } */
@@ -417,6 +495,7 @@ address .list :not(:last-child) {
     background: var(--filter-button-color);
     border-radius: 4px;
     border: none;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
@@ -537,7 +616,7 @@ address .list :not(:last-child) {
     width: 100%;
     height: 100%;
     border-radius: 50px;
-
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-items-container:hover .social-icon,
@@ -554,6 +633,7 @@ address .list :not(:last-child) {
     width: 20px;
     height: 20px;
     fill: #AFB1B8;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -595,11 +675,13 @@ header {
     letter-spacing: 0.03em;
     text-transform: uppercase;
 }
+
 .find-us-icon {
     width: 20px;
     height: 20px;
     fill: var(--icons-secondary-color);
 }
+
 .find-us-items {
     display: flex;
     gap: 10px;
@@ -614,6 +696,7 @@ header {
     height: 100%;
     border-radius: 50px;
     background-color: var(--icon-background);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .find-us-icon-container:hover,
